@@ -1,4 +1,4 @@
-#! bin/python 
+#!/usr/bin/env python
 import argparse, pprint, sys, os
 import boto3
 import messager as msg
@@ -13,7 +13,7 @@ parser.add_argument('--fields', help="Specify fields to return in a comma sepera
 args = parser.parse_args()
 pprint.pprint(args)
 
-region = args.region if args.region is not None else os.environ['AWS_REGION'] 
+region = args.region if args.region is not None else os.environ['AWS_REGION']
 
 ec2 = boto3.client('ec2', aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'], 
 						  aws_secret_access_key=os.environ['AWS_ACCESS_SECRET_KEY'],
@@ -23,6 +23,7 @@ msg.info("Checking region {}".format(region))
 
 class Instances():
 	def __init__(self):
+		""" Initializes variables for use later """
 		self.instances = []
 		self.fields = ['InstanceId','Owner','InstanceType', 'LaunchTime']
 		if args.fields is not None:
