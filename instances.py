@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!env/bin/python
 import argparse, pprint, sys, os
 import boto3
 import messager as msg
