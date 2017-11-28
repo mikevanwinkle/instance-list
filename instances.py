@@ -16,7 +16,7 @@ pprint.pprint(args)
 region = args.region if args.region is not None else os.environ['AWS_REGION'] 
 
 ec2 = boto3.client('ec2', aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'], 
-						  aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+						  aws_secret_access_key=os.environ['AWS_ACCESS_SECRET_KEY'],
 						  region_name=region)
 
 msg.info("Checking region {}".format(region))
@@ -24,7 +24,7 @@ msg.info("Checking region {}".format(region))
 class Instances():
 	def __init__(self):
 		self.instances = []
-		self.fields = ['InstanceId','Owner']
+		self.fields = ['InstanceId','Owner','InstanceType', 'LaunchTime']
 		if args.fields is not None:
 			for field in args.fields.split(','): 
 				self.fields.append(field)
