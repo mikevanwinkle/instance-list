@@ -79,5 +79,8 @@ class Instances():
 		print table.table
 
 if __name__ == '__main__':
-  app = Instances()
-  app.main()
+	try: 
+		app = Instances()
+		app.main()
+	except AttributeError:
+		msg.error('Invalid command {}'.format(args.command))
