@@ -23,7 +23,7 @@ export AWS_ACCESS_SECRET_KEY='YOURSECRET'
 Now simply run `source ./setup.sh` and the script will install and setup a virtualenv and download the script requirements. 
 
 # Usage
-The script options can be view using `./instances.py -h`
+The script options can be viewed using `./instances.py -h`
 
 ```
 usage: instances.py [-h] [--region REGION] [--order-by ORDER_BY]
