@@ -1,4 +1,4 @@
-sudo apt-get install python2.7 python-pip
+sudo apt-get install -y python2.7 python-pip
 sudo pip install virtualenv
 virtualenv env
 source env/bin/activate

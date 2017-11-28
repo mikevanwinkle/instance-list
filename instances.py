@@ -11,7 +11,7 @@ parser.add_argument('--region', help="Set the region to get instances from")
 parser.add_argument('--order-by', help="Which field should be used to order results, must be in the list of fields")
 parser.add_argument('--fields', help="Specify fields to return in a comma seperated list.")
 args = parser.parse_args()
-pprint.pprint(args)
+#pprint.pprint(args)
 
 region = args.region if args.region is not None else os.environ['AWS_REGION']
 
