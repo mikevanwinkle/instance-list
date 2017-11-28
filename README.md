@@ -14,7 +14,7 @@ sudo brew install python && sudo easy_install pip
 
 # Installation and Setup
 
-Now that you have python installed clone the respository to your local machine and then update the `setup.sh` file replacing 'YOURKEY' and 'YOURSECRET' with your AWS access id and secret key respectively. 
+Once you have python installed, clone the respository to your local machine and update the `setup.sh` file by replacing 'YOURKEY' and 'YOURSECRET' with your AWS access id and secret key respectively. 
 ```
 export AWS_ACCESS_KEY_ID='YOURKEY'
 export AWS_ACCESS_SECRET_KEY='YOURSECRET'
